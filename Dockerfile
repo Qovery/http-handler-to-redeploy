@@ -32,7 +32,7 @@ RUN apk update && apk add --no-cache ca-certificates tzdata
 COPY --from=builder /app/main /app/main
 
 # Expose the application port
-EXPOSE 8000
+EXPOSE 8080
 
 # Run the binary
 CMD ["/app/main"]
