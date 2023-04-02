@@ -24,17 +24,17 @@ func LoadConfig() Config {
 		httpPort = 8080
 	}
 
-	qoveryApiToken, set := os.LookupEnv("QOVERY_API_TOKEN")
+	qoveryApiToken, set := os.LookupEnv("Q_API_TOKEN")
 	if !set {
 		panic("QOVERY_API_TOKEN is not set")
 	}
 
-	qoveryProdApplicationId, set := os.LookupEnv("QOVERY_PROD_APPLICATION_ID")
+	qoveryProdApplicationId, set := os.LookupEnv("Q_PROD_APPLICATION_ID")
 	if !set {
 		panic("QOVERY_PROD_APPLICATION_ID is not set")
 	}
 
-	qoveryStagingApplicationId, set := os.LookupEnv("QOVERY_STAGING_APPLICATION_ID")
+	qoveryStagingApplicationId, set := os.LookupEnv("Q_STAGING_APPLICATION_ID")
 	if !set {
 		panic("QOVERY_STAGING_APPLICATION_ID is not set")
 	}
