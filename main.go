@@ -126,7 +126,9 @@ func processQueue(q *src.Queue[QueueData], config *src.Config) {
 
 	for {
 		if queueData, ok := q.Dequeue(); ok {
-			var tags []src.Tag
+			redeploy(&queueData.Context, client, environmentId, config.QoveryProdApplicationId)
+			// TODO: add support for staging
+			/*var tags []src.Tag
 			tags = append(tags, queueData.Webhook.Tags.Addition...)
 			tags = append(tags, queueData.Webhook.Tags.Deletion...)
 
@@ -139,7 +141,7 @@ func processQueue(q *src.Queue[QueueData], config *src.Config) {
 					// redeploy staging
 					redeploy(&queueData.Context, client, environmentId, config.QoveryStagingApplicationId)
 				}
-			}
+			}*/
 		}
 	}
 }
