@@ -96,7 +96,7 @@ func redeploy(c *gin.Context, client *qovery.APIClient, environmentId string, ap
 }
 
 func isTerminalState(state qovery.StateEnum) bool {
-	return state == qovery.STATEENUM_RUNNING || state == qovery.STATEENUM_DELETED ||
+	return state == qovery.STATEENUM_RUNNING || state == qovery.STATEENUM_DEPLOYED || state == qovery.STATEENUM_DELETED ||
 		state == qovery.STATEENUM_STOPPED || state == qovery.STATEENUM_CANCELED ||
 		state == qovery.STATEENUM_READY || strings.HasSuffix(string(state), "ERROR")
 }
