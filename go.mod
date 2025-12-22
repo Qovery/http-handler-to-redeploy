@@ -5,7 +5,7 @@ go 1.23.0
 require (
 	github.com/gin-gonic/gin v1.9.1
 	github.com/qovery/qovery-client-go v0.0.0-20230414102735-5bc35f00196a
-	github.com/sirupsen/logrus v1.9.0
+	github.com/sirupsen/logrus v1.9.1
 )
 
 require (
